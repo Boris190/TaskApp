@@ -1,0 +1,84 @@
+@import "../../styles/";
+.Box {
+    width: max-content;
+    height: 544px;
+    display: flex;
+    max-width: 1345px;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+
+    @include ipad {
+        height: 400px;
+        max-width: 100%;
+    }
+
+    @include phone {
+        height: 274px;
+    }
+
+    & + .Box {
+        margin-top: 60px;
+    }
+    > img {
+        width: 100%;
+        height: 100%;
+    }
+    &-Video {
+        position: absolute;
+        left: 42px;
+        bottom: 60px;
+        width: 84px;
+        height: 75px;
+        background: rgba(255, 255, 255, 0.4);
+        border-radius: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        @include phone {
+            width: 54px;
+            height: 58px;
+            left: 19px;
+            bottom: 41px;
+        }
+    }
+    &-Description {
+        position: absolute;
+        height: fit-content;
+        width: calc(100% - 84px);
+        top: 42px;
+        left: 42px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        @include phone {
+            width: calc(100% - 41px);
+            left: 21px;
+        }
+        &-Content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            font-style: normal;
+            color: #ffffff;
+            &_title {
+                font-weight: 500;
+                font-size: 24px;
+                line-height: 29px;
+            }
+            &_lessons {
+                font-size: 16px;
+                line-height: 20px;
+                color: #ffffff;
+            }
+        }
+        &_minutes {
+            font-weight: 500;
+            font-size: 24px;
+            line-height: 29px;
+            color: #ffffff;
+        }
+    }
+}

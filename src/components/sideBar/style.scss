@@ -1,0 +1,65 @@
+@import "../../styles/";
+.SideBar {
+    width: 160px;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    background: #ffe4d6;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    top: 0;
+
+    @include phone {
+        width: 100px;
+    }
+
+    &-Links {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+        margin-top: 120px;
+        width: 100%;
+        > button {
+            background: none;
+            border: none;
+            outline: none;
+            width: 100%;
+            cursor: pointer;
+
+            @include phone {
+                height: 48px;
+            }
+
+            > svg path {
+                fill: #e1aa98;
+            }
+            & + button {
+                margin-top: 70px;
+            }
+            &.active {
+                position: relative;
+                > svg path {
+                    fill: #8964d7;
+                }
+                &::after {
+                    transition: ease all 0.4s;
+                    height: 48px;
+                }
+            }
+            &::after {
+                content: "";
+                position: absolute;
+                bottom: 10%;
+                left: 1px;
+                width: 3px;
+                height: 0;
+                background-color: #6749a5;
+                @include phone {
+                    bottom: -5%;
+                }
+            }
+        }
+    }
+}

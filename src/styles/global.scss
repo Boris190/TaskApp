@@ -1,0 +1,33 @@
+@import "./index.scss";
+@import "./fonts.scss";
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+}
+#root {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+textarea,
+select,
+button,
+body {
+  font-family: "Montserrat";
+}
+a {
+  text-decoration: unset;
+}
+input {
+  border-radius: unset;
+  -webkit-appearance: none;
+  &:focus {
+    -webkit-appearance: none;
+  }
+}
+
+
+
