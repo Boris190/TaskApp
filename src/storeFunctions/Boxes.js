@@ -9,8 +9,8 @@ export async function getBoxes(count, category_id, animated) {
         {
             title: 'Illustration',
             lessons: '24 lessons',
-            min: '134 min',
             id: 2,
+            min: '134 min',
             favorive: false,
             img: 'banan.png'
         },
